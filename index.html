@@ -3,9 +3,29 @@
  Remove(Unpark) car from : leave {car_number} {hours}
  Print status of parking slot : status -->
 
-<div>
-	<button onclick="createSlot()">Create parking a lof of size</button>
-	<button onclick="parkIn()">Park a car</button>
-	<button onclick="parkOut()">Remove car from</button>
-	<button onclick="statusPark()">Status of parking slot</button>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insura Test - Parking Slot</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+	<div class="wrap">
+		<div id="listPark"></div>
+
+		<div class="wrap-button">
+			<button onclick="createSlot()">Create parking a lof of size</button>
+			<button onclick="parkIn()">Park a car</button>
+			<button onclick="parkOut()">Remove car from</button>
+			<button onclick="statusPark()">Status of parking slot</button>
+		</div>
+	</div>
+	
+
+
+</body>

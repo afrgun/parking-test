@@ -1,0 +1,23 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.wrap{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	position: absolute;
+	flex-direction: column;
+}
+
+.wrap-button{
+	margin-top: 20px;
+}
+
+button{
+	margin: 0 10px;
+}
+
