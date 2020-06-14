@@ -84,10 +84,32 @@ function parkOut(){
   slotAvailable += 1;
 
   checkSlot();
+  statusPark();
   document.getElementById("slotParking").innerHTML = slotAvailable + " Slots Avalaible";
 }
 
 function statusPark(){
-  console.log(resultPark);
-  
+  document.getElementById("customers").style.display = 'block';
+  document.getElementById("closetable").style.display = 'block';
+
+  var k = '<tbody>'
+    if(resultPark.length > 0){
+      for(var i = 0;i < resultPark.length; i++){
+        k+= '<tr>';
+          k+= '<td>' + (i+1) + '</td>';
+          k+= '<td>' + resultPark[i].vehicle_number + '</td>';
+          k+= '<td>' + resultPark[i].vehicle_color + '</td>';
+        k+= '</tr>';
+      }
+    } else {
+      k = '<tr><td colspan="3"> Data Not Found </td></tr>';
+    }
+   
+    k+='</tbody>';
+    document.getElementById('tableData').innerHTML = k;
+}
+
+function hidetable(){
+  document.getElementById("customers").style.display = 'none';
+  document.getElementById("closetable").style.display = 'none';
 }
