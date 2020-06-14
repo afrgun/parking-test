@@ -43,11 +43,11 @@ function parkIn(){
 
 
 function checkSlot(){
-  listParking = '<ul>';
+  listParking = '<ol>';
   resultPark.forEach(function(car) {
     listParking += '<li>'+ car.vehicle_number + '</li>';
   }); 
-  listParking += '</ul>';
+  listParking += '</ol>';
 
   return document.getElementById("listParking").innerHTML = listParking;
 }
@@ -69,9 +69,9 @@ function parkOut(){
       } else {
         if(hours > 2){
           charge = ( hours - 2 ) * 10 + 10;
-          alert("Charge $" + charge);
+          alert("Registration number " + resultPark[index].vehicle_number + " with Slot Number " + (index+1) + " is free with Charge $" + charge);
         } else {
-          alert("Charge $10");
+          alert("Registration number " + resultPark[index].vehicle_number + " with Slot Number " + (index+1) + " is free with Charge $10");
         }
 
         resultPark.splice(index, 1);
@@ -85,4 +85,9 @@ function parkOut(){
 
   checkSlot();
   document.getElementById("slotParking").innerHTML = slotAvailable + " Slots Avalaible";
+}
+
+function statusPark(){
+  console.log(resultPark);
+  
 }
